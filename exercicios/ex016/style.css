@@ -1,0 +1,11 @@
+* {
+    font-family: sans-serif;
+}
+
+body {
+    background-image: linear-gradient(to right, #9CADCE, #06A77D, #473198, #ac30eb);
+}
+
+p {
+    text-align: justify;
+}

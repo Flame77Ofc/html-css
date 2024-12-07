@@ -1,0 +1,50 @@
+<h1>Imagem Dinâmica</h1>
+<!-- Para criar esse source, coloque: source:media:type -->
+<picture> <!-- Muito Importante: A ordem deve ser seguida, sempre o de cima precisa ser menor que o de baixo.-->
+    <source media="(max-width: 750px)" srcset="imagens/Pequeno.png" type="image/png">
+    <source media="(max-width: 1050px)" srcset="imagens/Medio.png" type="image/png"> <!--OBS: Quando a imagem chegar a 1050px, carregará a Imagem media, de 700px-->
+    <img src="imagens/Grande.png" alt=""> <!-- OBS: Essa imagem contém 1000px -->
+    <!--Perceba que, há apenas uma imagem e 2 sources-->
+    <!--Ao diminuir o zoom/tamanho da tela, a imagem de adapta ao tamanho da sua tela.-->
+</picture>
+
+
+<!-- ! Imagens Dinâmicas -->
+Para fazer a adaptação de imagens de acordo com o tamanho da tela, utilizamos o elemento HTML <picture> em conjunto com <source> e <img>. Essa técnica permite que diferentes imagens sejam carregadas automaticamente dependendo da largura da tela do usuário, garantindo que o conteúdo seja responsivo e otimizado.
+
+Observações Finais:
+
+
+
+
+
+
+<!-- ~ Chat -->
+
+    Como Fazer:
+    Crie a estrutura básica do <picture>:
+    
+    O <picture> envolve os elementos <source> e <img>. Ele é usado para definir as imagens responsivas.
+    Adicione os elementos <source>:
+    
+    OBS: Para Criar um source, no VSCode, Digite: source:media:type. Onde irá criar isso:
+    <source media="(min-width: )" srcset="" type="image/">
+    Cada <source> define uma imagem específica para um intervalo de largura da tela usando o atributo media="(max-width: Xpx)".
+    Use o atributo srcset para indicar o caminho da imagem correspondente e o atributo type para definir o formato (como image/png).
+    Inclua o elemento <img>:
+    
+    O <img> funciona como fallback, ou seja, é a imagem padrão que será exibida caso nenhuma das condições dos <source> seja atendida.
+    Use o atributo alt para descrever a imagem e melhorar a acessibilidade.
+    Exemplo de Código:
+    html
+    Copiar código
+    <h1>Imagem Dinâmica</h1>
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/Pequeno.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/Medio.png" type="image/png">
+        <img src="imagens/Grande.png" alt="Descrição da imagem">
+    </picture>
+    Funcionamento:
+    Até 750px: O navegador carrega Pequeno.png.
+    Entre 751px e 1050px: O navegador carrega Medio.png.
+    Acima de 1050px: O navegador carrega Grande.png.

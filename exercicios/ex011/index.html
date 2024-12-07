@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagem Dinâmica</title>
+</head>
+<body>
+    <h1>Imagem Dinâmica</h1>
+    <!-- Para criar esse source, coloque: source:media:type -->
+    <picture> <!-- Muito Importante: A ordem deve ser seguida, sempre o de cima precisa ser menor que o de baixo.-->
+        <source media="(max-width: 750px)" srcset="imagens/Pequeno.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/Medio.png" type="image/png"> <!--OBS: Quando a imagem chegar a 1050px, carregará a Imagem media, de 700px-->
+        <img src="imagens/Grande.png" alt=""> <!-- OBS: Essa imagem contém 1000px -->
+        <!--Perceba que, há apenas uma imagem e 2 sources-->
+        <!--Ao diminuir o zoom/tamanho da tela, a imagem de adapta ao tamanho da sua tela.-->
+    </picture>
+</body>
+</html>
