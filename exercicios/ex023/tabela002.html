@@ -9,6 +9,7 @@
             font-family: 'Times New Roman', Times, serif;
         }
        table {
+        position: relative;
         width: 500px;
         border-collapse: collapse;
        }
@@ -20,11 +21,21 @@
         background-color: gray;
         color: white;
        }
+       caption {
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: 10px;
+        background-color: lightgray;
+       }
+       tbody tr:nth-child(odd) {
+        background-color: lightgray;
+       }
     </style>
 </head>
 <body>
     <h1>Tabelas</h1>
     <table>
+        <caption>População</caption>
         <thead>
             <tr>
                 <th>Estado</th>
