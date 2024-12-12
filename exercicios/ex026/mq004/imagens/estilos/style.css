@@ -37,18 +37,18 @@ img {
     margin: auto;
 }
 
-img #phone {
+#phone {
+    display: block;
+}
+#tablet {
     display: none;
 }
-img #tablet {
+#print {
     display: none;
 }
-img #print {
+#pc {
     display: none;
 }
-img #pc {
-    display: none;
-}
-img #tv {
+#tv {
     display: none;
 }
