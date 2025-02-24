@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogos</title>
+    <link rel="shortcut icon" href="controle-de-video-game.png" type="image/x-icon">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: darkslateblue;
+            color: aliceblue;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .Div-header {
+            background: rgba(103, 103, 208, 0.114);
+            border-radius: 0px 50px 0px 50px;
+            padding: 20px;
+            border: 1px solid white;
+            max-width: 350px;
+            width: min(450px, 100%);
+            margin-left: 10px;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        #LightDark {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            gap: 10px;
+        }
+        #LightDark button {
+            padding: 8px 12px;
+            font-size: 14px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        .light-mode {
+            background-color: rgb(157, 147, 223);
+            color: black;
+        }
+        .dark-mode {
+            background-color: darkslateblue;
+            color: aliceblue;
+        }
+        section#jogos {
+            margin-top: 4.2em;
+            height: 30em;
+        }
+        article.box {
+    background-color: cornflowerblue;
+    width: 90%;
+    height: 9em;
+    transition: transform 0.8s ease-in-out;
+    display: flex; /* Mantém imagem e texto lado a lado */
+    align-items: center;
+    margin: 0 auto 25px;
+}
+
+img {
+    height: 9em;
+    margin-right: 15px; /* Adiciona espaço entre a imagem e o texto */
+}
+
+.text {
+    display: flex;
+    flex-direction: column; /* Organiza o h2 e o p em coluna */
+}
+
+h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+a {
+    text-decoration: none;
+    color: rgb(5, 81, 211);
+} 
+p {
+    font-size: 0.8em;
+}
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <div class="Div-header">
+                <h1>Jogos</h1>
+            </div>
+        </header>
+        <section id="jogos">
+            <article class="box" id="box1" onmouseenter="cima(this)" onmouseleave="baixo(this)">
+                <img src="roblox.png">
+                <div class="text">
+                    <h2><a href="https://www.roblox.com/pt" target="_blank">Roblox</a></h2>
+                    <p>Roblox é uma plataforma de jogos online que permite aos usuários criar e jogar experiências em mundos virtuais. Ele oferece ferramentas para desenvolvimento, permitindo que qualquer pessoa programe e publique seus próprios jogos. Os jogadores podem explorar milhões de jogos criados pela comunidade, variando de aventuras a simuladores. Há um sistema de personalização de avatares e uma economia baseada na moeda virtual Robux. A criatividade e a interação social são aspectos centrais da plataforma.
+                    </p>
+                </div>
+            </article>
+            <article class="box" id="box2" onmouseenter="cima(this)" onmouseleave="baixo(this)">
+                <img src="minecraft.png">
+                <div class="text">
+                    <h2><a href="https://www.minecraft.net/pt-br" target="_blank">Minecraft</a></h2>
+                    <p>Minecraft é um jogo de mundo aberto onde os jogadores exploram, coletam recursos e constroem com blocos tridimensionais. Possui modos como Sobrevivência, Criativo e Hardcore, oferecendo desafios variados. O mundo é gerado proceduralmente, incluindo biomas, cavernas e dimensões como o Nether e o End. Além da construção, há combate contra inimigos e possibilidade de automatização com redstone. Com ampla liberdade, incentiva a criatividade e possui uma grande comunidade ativa.</p>
+                </div>
+            </article>
+
+            <article class="box" id="box3" onmouseenter="cima(this)" onmouseleave="baixo(this)">
+                <img src="fortnite.png">
+                <div class="text">
+                    <h2><a href="https://www.fortnite.com/" target="_blank">Fortnite</a></h2>
+                    <p>Fortnite é um jogo de tiro e sobrevivência desenvolvido pela Epic Games, famoso pelo modo Battle Royale. Nele, 100 jogadores competem para ser o último sobrevivente em um mapa em constante redução. O jogo se destaca pela mecânica de construção, permitindo criar estruturas para defesa e estratégia. Além do Battle Royale, há modos como Criativo e Salve o Mundo. Com eventos frequentes e colaborações, Fortnite se mantém popular na cultura gamer.
+                    </p>
+                </div>
+            </article>
+        </section>
+    </main>
+    <div id="LightDark">
+        <button onclick="light()">Modo Light</button>
+        <button onclick="dark()">Modo Dark</button>
+    </div>
+    <script>
+        function cima(element) {
+            element.style.transform = 'scale(1.1)';
+        }
+        function baixo(element) {
+            element.style.transform = 'scale(1)';
+        }
+        function light() {
+            document.body.classList.add("light-mode");
+            document.body.classList.remove("dark-mode");
+        }
+        function dark() {
+            document.body.classList.add("dark-mode");
+            document.body.classList.remove("light-mode");
+        }
+    </script>
+</body>
+</html>
