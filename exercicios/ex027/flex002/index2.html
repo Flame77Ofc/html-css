@@ -5,15 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flexible Box</title>
     <style>
+        /* O flex-wrap: wrap, wrap-reverse e nowrap e o flex-direction: row, row-reverse, column e column-reverse*/
        div.conteiner {
         background-color: red;
         display: flex;
+        flex-wrap: wrap; /* Quebra a linha */
+        flex-direction: row-reverse; /* Inverte a ordem dos elementos */
        }
        div.item {
+        background-color: lightblue;
         border: 1px solid black;
         text-align: center;
- 
-        flex: auto; /* Ocupa todo o espaço da div */
+        padding: 10px;
        }
     </style>
 </head>

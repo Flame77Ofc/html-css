@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       /* Justify Content */
+       #pai {
+           display: flex;
+           justify-content: flex-start;
+           background-color: lightblue;
+           height: 80px;
+       }
+       #pai2 {
+           display: flex;
+           justify-content: flex-end;
+           background-color: lightblue;
+           height: 80px;
+       }
+
+       #pai3 {
+           display: flex;
+           justify-content: center;
+           background-color: lightblue;
+           height: 80px;
+       }
+       #pai4 {
+           display: flex;
+           justify-content: space-between;
+           background-color: lightblue;
+           height: 80px;
+       }
+       #pai5 {
+           display: flex;
+           justify-content: space-evenly;
+           background-color: lightblue;
+           height: 80px;
+       }
+       #pai6 {
+           display: flex;
+           justify-content: space-around;
+           background-color: rgb(122, 180, 199);
+           height: 80px;
+       }
+
+       .filho {
+           background-color: rgb(72, 180, 248);
+           color: white;
+           padding: 20px;
+           margin: 10px;
+       }
+    </style>
+</head>
+<body>
+    <div id="pai">
+        <!-- Início -->
+        <div class="filho">Flex-start</div>
+        <div class="filho">Flex-start</div>
+        <div class="filho">Flex-start</div>
+    </div>
+
+    <div id="pai2">
+        <!-- Fim -->
+        <div class="filho">Flex-end</div>
+        <div class="filho">Flex-end</div>
+        <div class="filho">Flex-end</div>
+        <div class="filho">Flex-end</div>
+        <div class="filho">Flex-end</div>
+    </div>
+
+    <div id="pai3">
+        <!-- Centro -->
+        <div class="filho">center</div>
+        <div class="filho">center</div>
+    </div>
+
+    <div id="pai4">
+        <!-- Deixa um espaço ao redor dos irmãos(todos matematicamente igualados) -->
+        <div class="filho">space-between</div>
+        <div class="filho">space-between</div>
+        <div class="filho">space-between</div>
+    </div>
+
+    <div id="pai5">
+        <!-- Deixa um espaço ao redor dos elementos(todos matematicamente igualados) -->
+        <div class="filho">space-evenly</div>
+        <div class="filho">space-evenly</div>
+        <div class="filho">space-evenly</div>
+    </div>
+
+    <div id="pai6">
+        <!-- Divide a quantidade de elementos e centraliza cada um no seu correspondente centro -->
+        <div class="filho">space-around</div>
+        <div class="filho">space-around</div>
+        <div class="filho">space-around</div>
+    </div>
+</body>
+</html>
