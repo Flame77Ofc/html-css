@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 580px)">
+    <title>Document</title>
+    <style>
+       * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+       }
+
+       body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: lightgray;
+        height: 100vh;
+        width: 100vw;
+       }
+       header {
+        background-color: grey;
+        display: flex;
+        color: white;
+        padding: 10px;
+        flex-flow: row wrap;
+        justify-content: space-between;
+       }
+
+       header > h1 {
+        /* border: 1px dotted black; */
+        flex: 0 0 400px;
+       }
+       header > nav {
+        /* border: 1px dotted black; */
+        display: flex;
+
+        flex-flow: row wrap;
+        justify-content: flex-end;
+       }
+
+       header > nav > a {
+        background-color: black;
+        color: white;
+        padding: 10px;
+        margin: 5px;
+        border-radius: 5px;
+        text-decoration: none;
+        text-align: center;
+        align-items: center;
+       }
+
+       header > nav > a:hover {
+        background-color: white;
+        color: black;
+        transition: background-color 0.5s ease;
+       }
+
+       main {
+        background-color: white;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.23);
+       }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meu site flexível</h1>
+        <nav>
+            <a href="#">Opção 1</a>
+            <a href="#">Opção 2</a>
+            <a href="#">Opção 3</a>
+            <a href="#">Opção 4</a>
+            <a href="#">Opção 5</a>
+            <a href="#">Opção 6</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Teste de Flexbox</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo numquam sint delectus cum possimus ipsum minima dolore, repellendus voluptatum non voluptate iure dolorum id itaque eveniet, aspernatur error quasi incidunt.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo numquam sint delectus cum possimus ipsum minima dolore, repellendus voluptatum non voluptate iure dolorum id itaque eveniet, aspernatur error quasi incidunt.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo numquam sint delectus cum possimus ipsum minima dolore, repellendus voluptatum non voluptate iure dolorum id itaque eveniet, aspernatur error quasi incidunt.</p>
+    </main>
+</body>
+</html>

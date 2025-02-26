@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Propriedade flex: União de flex-basis: 150px, flex-shrink: 1, flex-grow: 1 
+        Ordem:
+        flex-grow;
+        flex-shrink;
+        flex-basis;
+
+        Se fosse assim:
+        flex-basis: 150px;
+        flex-shrink: 1;
+        flex-grow: 0;
+
+        Ficaria assim
+        flex: 0 1 150px;
+        */
+       .conteiner {
+        background: orange;
+        display: flex;
+        text-align: center;
+       }
+       .item {
+        background-color: cadetblue;
+        border: 1px solid black;
+        flex: 0 1 150px;
+       }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+</body>
+</html>
